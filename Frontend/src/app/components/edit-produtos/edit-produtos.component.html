@@ -1,0 +1,24 @@
+<div class="principal" *ngIf="produto">
+  <h2> <b>{{produto.nome}} </b></h2>
+  <div>
+    Produto: 
+    <input [(ngModel)]="produto.nome" placeholder="Nome"/>
+  </div>
+  <div>
+    Código: 
+    <input [(ngModel)]="produto.codigo" placeholder="Código" />
+  </div>
+  <div>
+    Estoque: 
+    <input [(ngModel)]="produto.estoque" placeholder="Estoque" />
+  </div>
+  <button class="salvar" (click)="updateProduto(produto)" *ngIf="produto.id">
+    <a href="/">Salvar</a>
+  </button>
+  <button class="deletar" (click)="deleteProduto(produto)" *ngIf="produto.id">
+    <a href="/">Deletar</a>
+  </button>
+  <button class="criar" (click)="createProduto(produto)" *ngIf="!produto.id">
+    <a href="/">Criar</a>
+  </button>
+</div>

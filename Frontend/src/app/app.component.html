@@ -1,0 +1,53 @@
+<div class="principal">
+  <div class="div1">
+    <button class="NovaCat" (click)="initNovaCategoria()">Nova Categoria</button>
+  </div>
+  <div class="div2">
+    <button class="NovoProd" (click)="initNovoProduto()">Novo Produto</button>
+  </div>
+
+  <div class="div3">
+    <table align="center" class="container cat">
+      <thead>
+        <tr class="linha">
+          <th>Código</th>
+          <th class="nome-cat">Nome</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let categoria of categorias">
+          <td>{{categoria.id}}</td>
+          <td class="nome-cat">{{categoria.nome}}</td>
+          <td><button class="editar" (click)="editCategoria(categoria)">Editar</button></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <app-edit-categorias [categoria]="categoriaToEdit"></app-edit-categorias>
+  </div>
+
+  <p></p>
+
+  <div class="div4">
+    <table align="center" class="container prod">
+      <thead>
+        <tr class="linha">
+          <th>Código</th>
+          <th class="nome-prod">Nome</th>
+          <th>Estoque</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let produto of produtos">
+          <td>{{produto.codigo}}</td>
+          <td>{{produto.nome}}</td>
+          <td>{{produto.estoque}}</td>
+          <td><button class="editar" (click)="editProduto(produto)">Editar</button></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <app-edit-produtos [produto]="produtoToEdit"></app-edit-produtos>
+  </div>
+</div>

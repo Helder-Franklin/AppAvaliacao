@@ -1,0 +1,17 @@
+<div class="principal" *ngIf="categoria">
+  <div>
+    <b>Categoria</b>
+  </div>  
+  <div>
+    <input [(ngModel)]="categoria.nome" placeholder="Nome" />
+  </div>
+  <button class="salvar" (click)="updateCategorias(categoria)" *ngIf="categoria.id">
+    <a href="/">Salvar</a>
+  </button>
+  <button class="deletar" (click)="deleteCategorias(categoria)" *ngIf="categoria.id">
+    <a href="/">Deletar</a>
+  </button>
+  <button class="criar" (click)="createCategorias(categoria)" *ngIf="!categoria.id">
+    <a href="/">Criar</a>
+  </button>
+</div>
