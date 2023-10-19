@@ -5,7 +5,8 @@ Implementação de CRUD utilizando C# .NET 6 e Angular, banco de dados MySQL cri
 dotnet ef database update
 ```
 
-Abaixo script gerado pela migração:
+### Abaixo script gerado pela migração:
+
 info: Microsoft.EntityFrameworkCore.Database.Command[20101]
       Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
       CREATE DATABASE `CRUD_AVALIACAO`;
