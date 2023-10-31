@@ -1,4 +1,4 @@
-# App de Avaliação
+# Sistema web para cadastro de Categoria e Produto
 Implementação de CRUD utilizando C# .NET 6 e Angular, banco de dados MySQL criado a partir de migração pelo Entity Framework.
 
 ```sh
